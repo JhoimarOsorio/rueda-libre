@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../theme-toggle.js?v=theme-mode"></script>
+    <link rel="stylesheet" href="../nocturna/tailwind.css" />
+    <title>Rueda Nocturna</title>
+  </head>
+  <body class="mx-auto max-w-5xl bg-crema p-8 font-sans text-verde-oscuro dark:bg-fondo-noche dark:text-texto-noche">
+    <nav aria-label="Navegación principal" class="relative mb-8 flex items-center justify-between border-b border-verde-ruta/30 pb-4 dark:border-white/20">
+      <details class="group relative">
+        <summary
+          aria-controls="menu-rueda-nocturna"
+          class="flex h-11 w-auto cursor-pointer list-none items-center justify-center gap-2 rounded-lg border border-verde-ruta/30 px-3 text-verde-oscuro transition hover:bg-crema-suave focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-verde-ruta dark:border-white/30 dark:text-white dark:hover:bg-white/10"
+        >
+          <span class="sr-only">Abrir o cerrar el menú de navegación</span>
+          <span aria-hidden="true" class="flex w-5 flex-col gap-1">
+            <span class="h-0.5 rounded bg-current transition-transform group-open:translate-y-1.5 group-open:rotate-45"></span>
+            <span class="h-0.5 rounded bg-current transition-opacity group-open:opacity-0"></span>
+            <span class="h-0.5 rounded bg-current transition-transform group-open:-translate-y-1.5 group-open:-rotate-45"></span>
+          </span>
+          <span class="text-sm font-semibold">Menú</span>
+        </summary>
+        <ul id="menu-rueda-nocturna" class="absolute left-0 top-full z-30 mt-3 flex w-56 flex-col gap-1 rounded-xl border border-verde-borde bg-verde-ruta p-2 text-white shadow-xl dark:border-white/20">
+          <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="../index.html">Inicio</a></li>
+          <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="contactanos.html">Contáctanos</a></li>
+          <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="reservas.html">Reservas</a></li>
+          <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="tarifas.html">Tarifas y rutas</a></li>
+          <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="../nocturna/index.html">Rueda Nocturna</a></li>
+        </ul>
+      </details>
+      <button
+        type="button"
+        data-theme-toggle
+        aria-label="Activar modo oscuro"
+        aria-pressed="false"
+        class="inline-flex min-h-11 items-center gap-2 rounded-lg border border-verde-ruta/30 px-3 text-sm font-semibold text-verde-oscuro transition hover:bg-crema-suave focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-verde-ruta dark:border-white/30 dark:text-white dark:hover:bg-white/10"
+      >
+        <span aria-hidden="true">◐</span><span data-theme-label>Oscuro</span>
+      </button>
+    </nav>
+
+    <header class="flex flex-col sm:flex-row sm:items-center gap-3 mb-4">
+      <img
+        src="../img/logo.svg"
+        alt="Logo de Rueda Libre"
+        class="w-16 h-16 object-contain shrink-0 hue-rotate-[-66deg]"
+      />
+      <h1 class="mb-0 font-display text-3xl font-bold text-verde-oscuro dark:text-texto-noche">
+        Kit de componentes - Rueda Nocturna
+      </h1>
+    </header>
+
+    <section class="mb-12">
+      <div class="flex gap-4 flex-wrap">
+        <a
+          href="reservas.html"
+          class="button-primary"
+        >
+          Reservar ahora
+        </a>
+
+        <a
+          href="prototipo.html"
+          class="button-accent"
+        >
+          Conocer más
+        </a>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="overflow-hidden rounded-lg border border-verde-borde bg-white shadow-sm dark:border-white/10 dark:bg-card-noche">
+          <div
+            class="flex h-40 items-center justify-center bg-azul-noche text-xl font-bold text-white"
+          >
+            Ruta A
+          </div>
+
+          <div class="p-5">
+            <h3 class="mb-2 text-lg font-bold text-azul-noche dark:text-white">
+              Recorrido Centro Histórico
+            </h3>
+
+            <p class="mb-4 text-sm text-gris-asfalto dark:text-texto-secundario-noche">7:30pm | 2 horas | Guiado</p>
+
+            <p class="mb-4 text-sm text-gris-asfalto dark:text-texto-card-noche">
+              Recorre los puntos emblematicos de la ciudad en la noche
+            </p>
+
+            <button
+              class="button-primary w-full"
+            >
+              Reservar
+            </button>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border border-verde-borde bg-white shadow-sm dark:border-white/10 dark:bg-card-noche">
+          <div
+            class="flex h-40 items-center justify-center bg-verde-ruta text-2xl font-bold text-white"
+          >
+            Ruta B
+          </div>
+
+          <div class="p-5">
+            <h3 class="mb-2 text-lg font-bold text-azul-noche dark:text-white">
+              Rutas Parques Nocturnos
+            </h3>
+
+            <p class="mb-4 text-sm text-gris-asfalto dark:text-texto-secundario-noche">
+              8:00pm | 1.5 horas | Guiado
+            </p>
+
+            <p class="mb-4 text-sm text-gris-asfalto dark:text-texto-card-noche">
+              Paseo por parques iluminados, apto para familias
+            </p>
+
+            <button
+              class="button-primary w-full"
+            >
+              Reservar
+            </button>
+          </div>
+        </div>
+
+        <div class="overflow-hidden rounded-lg border border-verde-borde bg-white shadow-sm dark:border-white/10 dark:bg-card-noche">
+          <div
+            class="flex h-40 items-center justify-center bg-verde-oscuro text-2xl font-bold text-white"
+          >
+            Ruta C
+          </div>
+
+          <div class="p-5">
+            <h3 class="mb-2 text-lg font-bold text-azul-noche dark:text-white">Ruta Miradores</h3>
+
+            <p class="mb-4 text-sm text-gris-asfalto dark:text-texto-secundario-noche">7:30pm | 3 horas | Guiado</p>
+
+            <p class="mb-4 text-sm text-gris-asfalto dark:text-texto-card-noche">
+              Llegada a miradores con vista panorámica nocturna
+            </p>
+
+            <button
+              class="button-primary w-full"
+            >
+              Reservar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <div class="rounded border-l-4 border-amarillo-farol bg-crema-suave p-4 dark:bg-superficie-noche">
+        <p class="font-semibold text-verde-oscuro dark:text-menta">¡Aviso importante!</p>
+
+        <p class="text-sm text-gris-asfalto dark:text-texto-secundario-noche">
+          Se requiere casco y luz para bicicleta en todas la rutas nocturnas
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="max-w-md rounded-xl bg-crema-suave px-6 py-8 shadow-md dark:bg-superficie-noche">
+        <div class="mb-4">
+          <label for="nombre" class="mb-2 block font-medium text-verde-oscuro dark:text-menta">
+            Nombre completo
+          </label>
+
+          <input
+            id="nombre"
+            type="text"
+            placeholder="Nombre completo"
+            class="w-full rounded-lg border border-verde-borde bg-white px-4 py-2 text-azul-noche placeholder:text-gris-asfalto focus:border-transparent focus:outline-none focus:ring-2 focus:ring-verde-ruta dark:border-white/25 dark:bg-card-noche dark:text-texto-noche dark:placeholder:text-texto-secundario-noche"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="celular" class="block text-verde-oscuro dark:text-menta">Celular</label>
+
+          <input
+            id="celular"
+            type="tel"
+            placeholder="300-XXX-XXXX"
+            class="w-full rounded-lg border border-verde-borde bg-white px-4 py-2 text-azul-noche placeholder:text-gris-asfalto focus:border-transparent focus:outline-none focus:ring-2 focus:ring-verde-ruta dark:border-white/25 dark:bg-card-noche dark:text-texto-noche dark:placeholder:text-texto-secundario-noche"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label for="ruta" class="mb-2 block font-medium text-verde-oscuro dark:text-menta">
+            Selecciona una ruta
+          </label>
+          <select
+            id="ruta"
+            class="w-full rounded-lg border border-verde-borde bg-white px-4 py-2 text-azul-noche focus:border-transparent focus:outline-none focus:ring-2 focus:ring-verde-ruta dark:border-white/25 dark:bg-card-noche dark:text-texto-noche"
+          >
+            <option>Selecciona una opción</option>
+            <option>Recorrido Centro Histórico</option>
+            <option>Ruta Parques Nocturnos</option>
+            <option>Ruta Miradores</option>
+          </select>
+        </div>
+
+        <button
+          class="button-primary w-full"
+        >
+          Enviar Solicitud
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

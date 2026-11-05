@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubre Medellín en bicicleta cuando se encienden las luces."
+    />
+    <title>Rueda Nocturna | Rueda Libre</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: "class" };</script>
+    <script src="../theme-toggle.js?v=theme-mode"></script>
+  </head>
+  <body class="bg-[#faf6ef] font-sans text-[#14213d] antialiased dark:bg-[#081b13] dark:text-white">
+    <main class="relative isolate flex min-h-screen flex-col overflow-hidden bg-[#faf6ef] dark:bg-[#081b13]">
+      <img
+        id="bike-background"
+        src="../img/electrica.jpeg"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 -z-10 h-full w-full object-cover object-center transition-opacity duration-500"
+      />
+      <div class="absolute inset-0 -z-10 bg-[#14213d]/70 dark:bg-black/65" aria-hidden="true"></div>
+
+      <header class="relative z-20 mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 py-5 sm:px-10 lg:px-16">
+        <a
+          class="flex items-center gap-3"
+          href="../index.html"
+          aria-label="Rueda Libre, inicio"
+        >
+          <img
+            src="../img/logo.svg"
+            alt=""
+            class="h-12 w-12 shrink-0 object-contain hue-rotate-[-66deg]"
+          />
+          <span class="text-lg font-bold leading-tight text-[#14213d] dark:text-white sm:text-xl">
+            Rueda Libre
+            <span class="mt-1 block text-[0.65rem] font-medium uppercase tracking-[0.16em] text-[#5b6470] dark:text-white/75">
+              Medellín en bicicleta
+            </span>
+          </span>
+        </a>
+        <button type="button" data-theme-toggle aria-label="Activar modo oscuro" aria-pressed="false" class="ml-auto inline-flex min-h-11 items-center gap-2 rounded-lg border border-[#1e7a4f]/40 px-3 text-xs font-semibold text-[#165e3d] transition hover:bg-[#e3eee8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e7a4f] dark:border-white/40 dark:text-white dark:hover:bg-white/10 sm:text-sm">
+          <span aria-hidden="true">◐</span><span data-theme-label>Oscuro</span>
+        </button>
+        <nav aria-label="Navegación principal" class="relative">
+          <details class="group relative">
+            <summary
+              aria-controls="menu-prototipo"
+              class="flex h-11 w-auto cursor-pointer list-none items-center justify-center gap-2 rounded-lg border border-[#1e7a4f]/40 px-3 text-[#165e3d] transition hover:bg-[#e3eee8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1e7a4f] dark:border-white/40 dark:text-white dark:hover:bg-white/10"
+            >
+              <span class="sr-only">Abrir o cerrar el menú de navegación</span>
+              <span aria-hidden="true" class="flex w-5 flex-col gap-1">
+                <span class="h-0.5 rounded bg-current transition-transform group-open:translate-y-1.5 group-open:rotate-45"></span>
+                <span class="h-0.5 rounded bg-current transition-opacity group-open:opacity-0"></span>
+                <span class="h-0.5 rounded bg-current transition-transform group-open:-translate-y-1.5 group-open:-rotate-45"></span>
+              </span>
+              <span class="text-sm font-semibold">Menú</span>
+            </summary>
+            <ul id="menu-prototipo" class="absolute right-0 top-full z-30 mt-3 flex w-56 flex-col gap-1 rounded-xl border border-white/20 bg-[#1e7a4f] p-2 text-white shadow-xl">
+              <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="../index.html">Inicio</a></li>
+              <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="contactanos.html">Contáctanos</a></li>
+              <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="reservas.html">Reservas</a></li>
+              <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="tarifas.html">Tarifas y rutas</a></li>
+              <li><a class="block rounded-lg px-4 py-2 text-sm font-semibold hover:bg-black/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="index.html">Rueda Nocturna</a></li>
+              <li><a class="block rounded-lg bg-black/15 px-4 py-2 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" href="prototipo.html" aria-current="page">Prototipo nocturno</a></li>
+            </ul>
+          </details>
+        </nav>
+      </header>
+
+      <section class="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-6 pb-14 pt-10 sm:px-10 sm:pb-20 lg:px-16">
+        <div class="max-w-3xl">
+          <p class="mb-6 inline-flex items-center gap-2 rounded-full bg-[#f39a2b] px-4 py-2 text-sm font-bold text-[#14213d]">
+            <span aria-hidden="true" class="h-2 w-2 rounded-full bg-[#1e7a4f]"></span>
+            Nuevo <span aria-hidden="true">·</span> Jueves a sábado
+          </p>
+          <h1 class="font-serif text-6xl font-bold leading-[0.95] sm:text-7xl lg:text-8xl">
+            Rueda <span class="block italic text-[#dce9e1]">Nocturna</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/85 sm:mt-8 sm:text-xl">
+            Descubre Medellín en bici cuando se encienden las luces.
+          </p>
+
+          <div class="mt-8 grid max-w-md grid-cols-2 border-t border-white/35 sm:mt-10">
+            <div class="py-5 pr-6">
+              <p class="text-3xl font-bold text-white sm:text-4xl">3</p>
+              <p class="mt-1 text-sm text-white/75">rutas</p>
+            </div>
+            <div class="border-l border-white/35 py-5 pl-6">
+              <p class="text-sm text-white/75">Desde</p>
+              <p class="mt-1 text-2xl font-bold text-white sm:text-3xl">$55.000</p>
+            </div>
+          </div>
+
+          <a
+            class="mt-2 inline-flex items-center gap-4 rounded-full bg-[#1e7a4f] px-7 py-4 font-bold text-white transition-colors hover:bg-[#165e3d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            href="../paginas/reservas.html"
+          >
+            Inscríbete
+            <span aria-hidden="true" class="text-xl leading-none">→</span>
+          </a>
+
+          <div class="mt-6 flex items-center gap-2" role="group" aria-label="Controles de fotos de bicicletas">
+            <button
+              id="bike-previous"
+              type="button"
+              aria-label="Foto anterior"
+              title="Foto anterior"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-black/20 text-xl transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <span aria-hidden="true">‹</span>
+            </button>
+            <button
+              id="bike-toggle"
+              type="button"
+              aria-label="Pausar el cambio automático"
+              title="Pausar"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-black/20 text-sm transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <span id="bike-toggle-icon" aria-hidden="true">Ⅱ</span>
+            </button>
+            <button
+              id="bike-next"
+              type="button"
+              aria-label="Foto siguiente"
+              title="Foto siguiente"
+              class="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-black/20 text-xl transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <span aria-hidden="true">›</span>
+            </button>
+            <span id="bike-count" class="ml-2 text-sm text-white/80" aria-live="off">
+              Bicicleta 1 de 12
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <footer class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-6 pb-5 text-xs text-[#14213d]/80 dark:text-white/70 sm:px-10 lg:px-16">
+        <p>Medellín, Colombia</p>
+        <p>Rueda Libre <span aria-hidden="true">·</span> Rutas nocturnas</p>
+      </footer>
+    </main>
+    <script>
+      const bikeImages = [
+        "../img/electrica.jpeg",
+        "../img/electrica1.jpeg",
+        "../img/electrica2.jpeg",
+        "../img/electrica4.jpeg",
+        "../img/MOntaña2.jpeg",
+        "../img/Montaña (9).jpeg",
+        "../img/montaña (10).jpeg",
+        "../img/montaña1.jpeg",
+        "../img/urbana (2).jpeg",
+        "../img/urbana(3).jpeg",
+        "../img/urbana.jpeg",
+        "../img/urbana1.jpeg",
+      ];
+      const backgroundImage = document.querySelector("#bike-background");
+      const countLabel = document.querySelector("#bike-count");
+      const toggleButton = document.querySelector("#bike-toggle");
+      const toggleIcon = document.querySelector("#bike-toggle-icon");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let activeIndex = 0;
+      let timerId = null;
+      let fadeTimeoutId = null;
+      let isPaused = reducedMotion.matches;
+
+      bikeImages.forEach((source) => {
+        const image = new Image();
+        image.src = source;
+      });
+
+      const updateToggleButton = () => {
+        const label = isPaused ? "Reanudar el cambio automático" : "Pausar el cambio automático";
+        toggleButton.setAttribute("aria-label", label);
+        toggleButton.title = isPaused ? "Reanudar" : "Pausar";
+        toggleIcon.textContent = isPaused ? "▶" : "Ⅱ";
+      };
+
+      const showBike = (nextIndex) => {
+        activeIndex = (nextIndex + bikeImages.length) % bikeImages.length;
+        backgroundImage.classList.add("opacity-0");
+        window.clearTimeout(fadeTimeoutId);
+        fadeTimeoutId = window.setTimeout(() => {
+          backgroundImage.src = bikeImages[activeIndex];
+          countLabel.textContent = `Bicicleta ${activeIndex + 1} de ${bikeImages.length}`;
+          window.requestAnimationFrame(() => backgroundImage.classList.remove("opacity-0"));
+        }, reducedMotion.matches ? 0 : 300);
+      };
+
+      const startTimer = () => {
+        window.clearInterval(timerId);
+        timerId = window.setInterval(() => showBike(activeIndex + 1), 3000);
+      };
+
+      const startAutoAdvance = () => {
+        if (reducedMotion.matches || document.hidden) return;
+        isPaused = false;
+        updateToggleButton();
+        startTimer();
+      };
+
+      const pauseAutoAdvance = () => {
+        window.clearInterval(timerId);
+        timerId = null;
+        isPaused = true;
+        updateToggleButton();
+      };
+
+      document.querySelector("#bike-previous").addEventListener("click", () => {
+        showBike(activeIndex - 1);
+      });
+      document.querySelector("#bike-next").addEventListener("click", () => {
+        showBike(activeIndex + 1);
+      });
+      toggleButton.addEventListener("click", () => {
+        if (isPaused) startAutoAdvance();
+        else pauseAutoAdvance();
+      });
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          window.clearInterval(timerId);
+          timerId = null;
+        } else if (!isPaused && !reducedMotion.matches) {
+          startTimer();
+        }
+      });
+      reducedMotion.addEventListener("change", (event) => {
+        if (event.matches) pauseAutoAdvance();
+        else startAutoAdvance();
+      });
+
+      updateToggleButton();
+      if (!reducedMotion.matches) startAutoAdvance();
+    </script>
+  </body>
+</html>

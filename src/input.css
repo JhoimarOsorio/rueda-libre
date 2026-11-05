@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@source "../nocturna/index.html";
+@source "../paginas/rueda_noctuna.html";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-verde-ruta: #1e7a4f;
+  --color-verde-oscuro: #165e3d;
+  --color-naranja-pedal: #f39a2b;
+  --color-azul-noche: #14213d;
+  --color-crema: #faf6ef;
+  --color-gris-asfalto: #5b6470;
+  --color-amarillo-farol: #ffd166;
+
+  --color-crema-suave: #f1eee6;
+  --color-verde-borde: #d8ded8;
+  --color-verde-claro: #8dc5a5;
+  --color-menta: #b8dfc7;
+  --color-texto-noche: #f1eee6;
+  --color-texto-secundario-noche: #c7d9ce;
+  --color-texto-card-noche: #d1dcd4;
+  --color-fondo-noche: #081b13;
+  --color-superficie-noche: #10251a;
+  --color-card-noche: #183526;
+
+  --font-sans: "Open Sans", sans-serif;
+  --font-display: "Montserrat", sans-serif;
+}
+
+@layer components {
+  .button-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-3 rounded-lg bg-verde-ruta px-6 py-3 font-bold text-white transition-colors hover:bg-verde-oscuro focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-azul-noche dark:focus-visible:outline-amarillo-farol;
+  }
+
+  .button-accent {
+    @apply inline-flex min-h-11 items-center justify-center gap-3 rounded-lg bg-amarillo-farol px-6 py-3 font-bold text-azul-noche transition-colors hover:bg-naranja-pedal focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-azul-noche;
+  }
+}

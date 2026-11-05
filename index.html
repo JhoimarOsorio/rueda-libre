@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alquiler de bicicletas y recorridos guiados en Medellín.">
+    <title>Rueda Libre | Bicicletas y recorridos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap-theme.css?v=theme-mode">
+    <link rel="stylesheet" href="carousel.css">
+    <script src="theme-toggle.js?v=theme-mode"></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+    <nav class="navbar navbar-dark bg-primary sticky-top shadow-sm site-navbar" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.svg" alt="" width="42" height="42">
+                <span>Rueda Libre</span>
+            </a>
+            <details class="navbar-menu">
+                <summary aria-controls="menuPrincipalLinks">
+                    <span class="visually-hidden">Abrir o cerrar el menú de navegación</span>
+                    <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+                </summary>
+                <ul class="navbar-nav" id="menuPrincipalLinks">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paginas/contactanos.html">Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paginas/reservas.html">Reservas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="paginas/tarifas.html">Tarifas y rutas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="nocturna/index.html">Rueda Nocturna</a></li>
+                </ul>
+            </details>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Activar modo oscuro" aria-pressed="false">
+                <span aria-hidden="true">◐</span><span data-theme-label>Oscuro</span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="contenido-principal" tabindex="-1">
+        <section class="container py-5">
+            <div class="row align-items-center g-4 g-lg-5">
+                <div class="col-12 col-md-5 text-center">
+                    <img class="img-fluid hero-logo" src="img/logo.svg" alt="Logo de Rueda Libre">
+                </div>
+                <div class="col-12 col-md-7 text-center text-md-start">
+                    <p class="eyebrow mb-2">Muévete a tu propio ritmo</p>
+                    <h1 class="display-4 fw-bold">Explora Medellín en bicicleta</h1>
+                    <p class="lead text-secondary">Alquila tu bicicleta y descubre la ciudad de forma sostenible, saludable y divertida.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-md-start">
+                        <a class="btn btn-primary btn-lg" href="paginas/reservas.html">Reserva tu bicicleta</a>
+                        <a class="btn btn-outline-primary btn-lg" href="paginas/tarifas.html">Ver tarifas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5" aria-labelledby="servicios-title">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <p class="eyebrow mb-2">Todo para tu próxima salida</p>
+                    <h2 class="section-title" id="servicios-title">Nuestros servicios</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <article class="card h-100 service-card">
+                            <img src="img/alquiler.svg" class="card-img-top service-image" alt="Ilustración de bicicleta para alquilar">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Alquiler de bicicletas</h3>
+                                <p class="card-text">Bicicletas urbanas, de montaña y eléctricas. Incluye casco y candado.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0"><a href="paginas/tarifas.html" class="btn btn-outline-primary">Consultar tarifas</a></div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card h-100 service-card">
+                            <img src="img/taller.svg" class="card-img-top service-image" alt="Ilustración de taller de bicicletas">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Taller de bicicletas</h3>
+                                <p class="card-text">Aprende a cambiar una llanta, ajustar frenos y mantener tu bicicleta.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0"><a href="paginas/contactanos.html" class="btn btn-outline-primary">Contacta para el taller</a></div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card h-100 service-card">
+                            <img src="img/recorridos.svg" class="card-img-top service-image" alt="Ilustración de recorrido guiado">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Recorridos guiados</h3>
+                                <p class="card-text">Conoce los rincones, la historia y la cultura de Medellín con guías locales.</p>
+                            </div>
+                            <div class="card-footer bg-transparent border-0 pt-0"><a href="paginas/tarifas.html#recorridos" class="btn btn-outline-primary">Consultar recorridos guiados</a></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5" aria-labelledby="promociones-title">
+            <div class="text-center mb-4">
+                <p class="eyebrow mb-2">Inspírate y shttp://bataedu.com/al a rodar</p>
+                <h2 class="section-title" id="promociones-title">Planes para descubrir la ciudad</h2>
+            </div>
+            <div id="promo-carousel"  class="three-d-carousel promo-carousel" data-carousel="promotions" data-image-prefix="img/" data-carousel-interval="5000" role="region" aria-roledescription="carrusel" aria-label="Promociones de Rueda Libre">
+                <div class="three-d-track" aria-live="off"></div>
+                <div class="three-d-controls">
+                    <button class="three-d-button three-d-prev" type="button" aria-label="Promoción anterior">‹</button>
+                    <span class="three-d-count" aria-hidden="true"></span>
+                    <button class="three-d-button three-d-next" type="button" aria-label="Siguiente promoción">›</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-12 col-lg-6">
+                        <h2 class="section-title">¿Quiénes somos?</h2>
+                        <p>Somos una empresa comprometida con la movilidad sostenible en Medellín. Creemos que recorrer la ciudad en bicicleta es una gran forma de conocerla, cuidar el medio ambiente y mejorar tu salud.</p>
+                        <a href="#encuentranos" class="boton-visita">Encuéntranos fácilmente y ven a visitarnos</a>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h2 class="section-title">¿Cómo alquilar?</h2>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">Elige el tipo de bicicleta y el tiempo de uso.</li>
+                            <li class="list-group-item">Completa tu reserva en línea.</li>
+                            <li class="list-group-item">Recibe tu bicicleta y disfruta el recorrido.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row g-3 mt-4">
+                    <div class="col-12 col-md-4"><div class="benefit h-100"><strong>Seguro incluido</strong><span>En todos nuestros alquileres.</span></div></div>
+                    <div class="col-12 col-md-4"><div class="benefit h-100"><strong>Tarifas flexibles</strong><span>Opciones por hora, media jornada o día completo.</span></div></div>
+                    <div class="col-12 col-md-4"><div class="benefit h-100"><strong>Asistencia mecánica</strong><span>Estamos contigo durante el recorrido.</span></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5" id="encuentranos">
+            <div class="text-center mb-4">
+                <p class="eyebrow mb-2">Estamos cerca de ti</p>
+                <h2 class="section-title">Encuéntranos</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center mb-4">
+                <div class="col"><a class="location-link" href="paginas/reservas.html" aria-label="Ir a reservas de bicicletas"><img class="img-fluid rounded-4 location-image" src="img/alquiler.svg" alt="Bicicletas disponibles para alquiler"></a></div>
+                <div class="col"><a class="location-link" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Abrir la ubicación en Google Maps"><img class="img-fluid rounded-4 location-image" src="img/recorridos.svg" alt="Rutas para recorrer Medellín"></a></div>
+            </div>
+            <div class="text-center">
+                <p>Estamos cerca de la estación Estadio. Atendemos de lunes a viernes de 7:00 a. m. a 7:00 p. m. y sábados y domingos de 6:00 a. m. a 2:00 p. m.</p>
+                <a class="btn btn-primary" href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Visítanos en el mapa</a>
+            </div>
+        </section>
+
+        <section class="bg-light py-5" aria-labelledby="consulta-title">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-8">
+                        <header class="text-center mb-4">
+                            <p class="eyebrow mb-2">¿Tienes preguntas?</p>
+                            <h2 class="section-title" id="consulta-title">Escríbenos</h2>
+                            <p class="text-secondary">Déjanos tus datos y te indicaremos cómo continuar.</p>
+                        </header>
+                        <form id="consulta-form" class="card form-card p-3 p-md-4">
+                            <div class="mb-3">
+                                <label class="form-label" for="consulta-nombre">Nombre</label>
+                                <input class="form-control" type="text" id="consulta-nombre" name="nombre" autocomplete="name" required minlength="2">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="consulta-correo">Correo electrónico</label>
+                                <input class="form-control" type="email" id="consulta-correo" name="correo" autocomplete="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="consulta-mensaje">¿En qué podemos ayudarte?</label>
+                                <textarea class="form-control" id="consulta-mensaje" name="mensaje" rows="4" required minlength="10" maxlength="500"></textarea>
+                            </div>
+                            <div class="d-grid d-sm-flex justify-content-sm-end">
+                                <button class="btn btn-primary" type="submit">Enviar consulta</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal fade" id="consulta-modal" tabindex="-1" aria-labelledby="consulta-modal-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5" id="consulta-modal-title">Consulta lista</h2>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este sitio es una demostración estática y no envía ni almacena tus datos. Para contactarnos, escríbenos directamente a <a href="mailto:ruedalibrem@gmail.com">ruedalibrem@gmail.com</a>.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer py-4">
+        <div class="container text-center">
+            <p class="mb-1"><strong>Rueda Libre</strong> · Alquiler de bicicletas y recorridos guiados</p>
+            <p class="mb-0">Contacto: <a href="mailto:ruedalibrem@gmail.com">ruedalibrem@gmail.com</a> · © 2026 Rueda Libre</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="carousel.js"></script>
+    <script>
+        document.getElementById("consulta-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            bootstrap.Modal.getOrCreateInstance(document.getElementById("consulta-modal")).show();
+        });
+    </script>
+</body>
+</html>

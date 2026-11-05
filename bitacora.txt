@@ -1,0 +1,268 @@
+Bitácora del proyecto: Rueda Libre
+Nombre del proyecto: Rueda Libre
+Tema: Página web para el alquiler de bicicletas en Medellín.
+
+1. Objetivo del proyecto
+Crear una página web informativa para promocionar el alquiler de bicicletas, los talleres básicos y los recorridos guiados en Medellín.
+
+2. Desarrollo del primer código: Página principal (index.html)
+
+Se creó la estructura básica de HTML con html, head y body.
+
+Se agregó el título de la página: Rueda Libre.
+
+Se incluyó el logotipo y las imágenes relacionadas con las bicicletas.
+
+Se presentó información sobre la empresa y su compromiso con la movilidad sostenible.
+
+Se describieron los servicios de alquiler, talleres y recorridos guiados.
+
+Se agregaron listas ordenadas y desordenadas con los pasos para alquilar y sus beneficios.
+
+Se incluyeron enlaces para consultar las tarifas, los recorridos, la ubicación y el correo electrónico.
+
+Se añadió información sobre los horarios de atención y la ubicación del negocio.
+
+3. Desarrollo del segundo código: Tarifas (tarifas.html)
+
+Se creó una página secundaria con un enlace para regresar a la página principal.
+
+Se agregó el logotipo de la empresa.
+
+Se elaboraron tablas HTML para mostrar los precios del alquiler de bicicletas urbanas, de montaña y eléctricas.
+
+Se creó una segunda tabla con los recorridos guiados, sus distancias, duraciones, niveles y precios.
+
+Se añadió información sobre los elementos incluidos en el alquiler y los horarios de salida.
+
+Se incorporó una lista de los artículos recomendados para los recorridos.
+
+4. Herramientas y etiquetas utilizadas
+
+HTML para estructurar el contenido.
+
+Etiquetas de encabezado: h1, h2, h3 y h4.
+
+Etiquetas de texto: p y strong.
+
+Etiquetas de listas: ul, ol y li.
+
+Etiquetas de enlaces e imágenes: a e img.
+
+Etiquetas de tablas: table, thead, tbody, tr, th, td y caption.
+
+5. Conclusión
+Con estos dos códigos se construyó una página web sencilla y organizada para Rueda Libre. La página principal presenta la empresa y sus servicios, mientras que la página de tarifas permite consultar los precios y los detalles de los recorridos. Se practicó el uso de etiquetas HTML, enlaces internos y externos, imágenes, listas y tablas.
+
+6. Esquema de regiones y controles HTML
+
+Las páginas usan las regiones header (marca y navegación), nav (menú principal), main (contenido único de la página) y footer (contacto y datos del negocio). Los contenidos se agrupan en section y article con encabezados en orden.
+
+La navegación móvil se abre con un checkbox HTML asociado a la etiqueta “Menú”; el teclado puede enfocarlo y alternar su estado. Las casillas de las bicicletas permiten seleccionar varias opciones. Los formularios usan controles nativos, etiquetas asociadas y atributos required, minlength, maxlength, pattern, min y max para validación del navegador. La sección de promociones usa botones de opción HTML y etiquetas para cambiar de tarjeta sin JavaScript. El ejemplo de modal de reservas se abre y se cierra con enlaces a fragmentos de la página y CSS.
+
+La página no incluye JavaScript. Sin un servidor no se pueden almacenar ni enviar reservas o mensajes, ni crear una confirmación que lea los datos del formulario. La sección del modal es una demostración visual y lo explica.
+
+7. Pruebas de validación de formularios
+
+Campo | Regla HTML | Resultado esperado
+Nombre | required, mínimo 2 caracteres | El navegador impide continuar si falta o es demasiado corto.
+Teléfono | required, patrón de 7 a 15 dígitos | El navegador rechaza letras, espacios y longitudes fuera del patrón.
+Correo | required, type=email | El navegador pide un correo con formato válido.
+Tipo de bicicleta | casillas checkbox con el mismo name | Se pueden escoger varias bicicletas; no es posible exigir “al menos una de varias casillas” solo con HTML estándar.
+Duración, fecha y hora | required y controles nativos | El navegador solicita completar cada campo.
+Cantidad | required, mínimo 1 y máximo 10 | El navegador rechaza números fuera del rango.
+Asunto | required y opción inicial deshabilitada | El navegador solicita una opción.
+Mensaje | required, mínimo 10 y máximo 1000 caracteres | El navegador rechaza texto vacío, corto o demasiado largo.
+
+Alcance de la prueba: las restricciones se expresan en HTML y las evalúa el navegador; el sitio estático no persiste ni procesa formularios.
+
+8. Auditoría de accesibilidad y correcciones
+
+Fecha: 27/10/2026. Revisión manual de las cinco páginas HTML, imágenes y navegación con teclado.
+
+Hallazgo 1: faltaba un enlace para saltar directamente al contenido principal. Corrección: se añadió “Saltar al contenido principal” al inicio de cada página, visible al enfocarlo, con destino al main.
+Hallazgo 2: el menú móvil requería un control identificable y operable por teclado. Corrección: se mantuvo el checkbox HTML con etiqueta “Menú”, nombre accesible, aria-controls e indicador de foco; los enlaces se mantienen visibles en escritorio.
+Hallazgo 3: las promociones ocultas podían dejar enlaces fuera de vista en el recorrido de teclado. Corrección: se cambió la fila deslizante por tarjetas superpuestas; las no seleccionadas usan visibility:hidden sin retraso, no reciben foco y cada opción del carrusel tiene nombre accesible.
+Hallazgo 4: algunos enlaces de acción eran ambiguos fuera de su tarjeta (“Escríbenos”, “Ver recorridos”, “Reserva ahora”). Corrección: se cambiaron por “Contacta para el taller”, “Consultar recorridos guiados” y “Reserva una bicicleta”.
+Hallazgo 5: el ejemplo CSS de modal declaraba aria-modal aunque no podía limitar el foco. Corrección: se retiraron role=dialog y aria-modal; el panel se identifica como sección, recibe foco por fragmento y advierte que no envía datos.
+Hallazgo 6: no había skip link en la página comparativa y los nombres de navegación eran poco descriptivos. Corrección: se añadió el enlace para saltar al contenido, se nombraron las regiones nav y se aclararon los enlaces de comparación.
+
+Hallazgo 7: al probar el salto con teclado, el destino main no recibía el foco porque no era enfocable. Corrección: se añadió tabindex="-1" al main de cada página; el enlace ahora mueve el foco al contenido principal sin añadirlo al orden normal de tabulación.
+
+Comprobaciones: las cinco páginas HTML declaran lang="es", tienen un solo main, un h1 y no presentan saltos en la jerarquía de encabezados. Todas las imágenes tienen atributo alt y cargan localmente; los logos que repiten la marca junto al texto usan alt vacío. Los campos de formulario tienen label y las opciones de bicicletas tienen nombres que identifican su categoría y opción. No se encontraron scripts. Se verificaron los tamaños móvil y escritorio, sin desbordamiento horizontal.
+
+Pruebas interactivas finales | Resultado
+Teclado, menú móvil a 390 px: enfocar el control y pulsar espacio abre el menú | Aprobado
+Teclado, salto al contenido en Reservas: pulsar Enter enfoca main | Aprobado
+Teclado, promociones: flecha derecha cambia la opción y el enlace de la tarjeta oculta no recibe foco | Aprobado
+Formulario de reservas: los campos tienen etiquetas, el formulario vacío es inválido y hay 11 casillas de bicicleta | Aprobado
+Navegación a 1280 px y 390 px: enlaces disponibles según el diseño y sin desbordamiento horizontal | Aprobado
+
+9. Validación de contraste de la paleta de marca
+
+Verificador: WebAIM Contrast Checker (API oficial), WCAG AA: https://webaim.org/resources/contrastchecker/
+Criterios: texto normal apto desde 4.5:1; texto grande apto desde 3:1. Si no alcanza 3:1, no es apto ni siquiera para texto grande.
+
+Texto / fondo | Relación | Clasificación
+Blanco #FFFFFF sobre Verde Ruta #1E7A4F | 5.31:1 | Apta para texto normal
+Blanco #FFFFFF sobre Naranja Pedal #F39A2B | 2.21:1 | No apta
+Azul Noche #14213D sobre Naranja Pedal #F39A2B | 7.20:1 | Apta para texto normal
+Azul Noche #14213D sobre Crema #FAF6EF | 14.8:1 | Apta para texto normal
+Gris Asfalto #5B6470 sobre Crema #FAF6EF | 5.56:1 | Apta para texto normal
+Verde Ruta #1E7A4F sobre Crema #FAF6EF | 4.93:1 | Apta para texto normal
+Naranja Pedal #F39A2B sobre Crema #FAF6EF | 2.05:1 | No apta
+Blanco #FFFFFF sobre Azul Noche #14213D | 15.9:1 | Apta para texto normal
+
+Mapa de uso de color propuesto para aplicar en el siguiente reto CSS:
+- Fondo general: Crema #FAF6EF.
+- Títulos y encabezados: Azul Noche #14213D.
+- Texto principal: Azul Noche #14213D; texto secundario: Gris Asfalto #5B6470.
+- Botón principal: Verde Ruta #1E7A4F con texto blanco.
+- Botón secundario: Naranja Pedal #F39A2B con texto Azul Noche #14213D. No usar texto blanco sobre naranja.
+- Enlaces: Verde Ruta #1E7A4F sobre Crema y subrayados para no depender solo del color.
+- Naranja Pedal se reserva para fondos de controles secundarios, bordes y acentos; no usarlo como texto sobre Crema.
+
+La paleta se documentó y sus colores se aplicaron en las hojas de estilos Bootstrap y CSS propio durante la actualización del 28/10/2026.
+
+10. Publicación v0.2
+
+Repositorio identificado: https://github.com/JhoimarOsorio/rueda_libre.
+URL pública de GitHub Pages: https://jhoimarosorio.github.io/rueda_libre/
+Repositorio: https://github.com/JhoimarOsorio/rueda_libre.
+Descripción del repositorio: “Sitio accesible de bicicletas, reservas y rutas en Medellin: https://jhoimarosorio.github.io/rueda_libre/”.
+Publicación: rama main, raíz del repositorio. Commit de publicación: 79147f3693cf3dd54726d895d98c49afa19aa906. El despliegue de GitHub Pages terminó correctamente.
+Verificación en línea (27/10/2026): se recorrieron inicio, contacto, reservas, tarifas y comparación CSS. Las cinco páginas cargan con lang="es", un h1 y sin scripts; las 30 imágenes cargan y tienen atributo alt; no se encontraron enlaces internos rotos. Se comprobaron también los nombres de archivo con acentos y mayúsculas en las bicicletas.
+
+11. Actualización de landing, paleta e ilustraciones
+
+Fecha: 28/10/2026.
+
+Landing (index.html): se añadió un formulario de consulta con campos etiquetados y validación nativa para nombre, correo y mensaje. Al enviarlo, se abre un modal del componente Bootstrap 5.3.8, con cierre accesible y un aviso de que la página estática no transmite ni almacena los datos. Se agregó el bundle JavaScript de Bootstrap y el controlador para abrir el modal después de validar el formulario. Para recibir consultas reales todavía se requiere conectar un servidor o servicio de formularios.
+
+Paleta: se aplicaron los colores documentados en bootstrap-theme.css y style.css. Verde Ruta #1E7A4F queda como color primario; Azul Noche #14213D como texto; Crema #FAF6EF como fondo; Gris Asfalto #5B6470 como texto secundario; y Naranja Pedal #F39A2B como acento. Se actualizaron botones, enlaces, fondos claros, tablas, bordes y sombras. El naranja se utiliza como acento, no como texto sobre crema.
+
+Ilustraciones: se aplicó un filtro CSS selectivo a logo.svg, alquiler.svg, taller.svg y recorridos.svg para cambiar su tono azul al verde de la marca. Las fotografías JPEG no se modificaron. El filtro se definió tanto en bootstrap-theme.css como en style.css, para que también se aplique en la página comparativa.
+
+Comprobaciones: el editor no reportó errores en los HTML y CSS modificados. En navegador se verificó que el modal abre y cierra tras el envío de un formulario válido, que no hay desbordamiento horizontal a 390 px y que los SVG seleccionados reciben el filtro de color. La validación no incluyó envío real ni persistencia de datos.
+
+12. Enlaces e interacción de imágenes de ubicación
+
+Fecha: 28/10/2026.
+
+En index.html se envolvieron las ilustraciones de la sección “Encuéntranos” con enlaces: la imagen de bicicletas lleva a paginas/reservas.html y la ilustración de rutas abre Google Maps, igual que el enlace de ubicación de esa sección. Se añadieron nombres accesibles para ambos enlaces.
+
+En bootstrap-theme.css se agregó un realce al pasar el mouse y al enfocar con teclado: elevación y sombra en el enlace, escala suave en la imagen y contorno visible de foco. El contenedor recorta la escala para evitar que la imagen invada el contenido vecino.
+
+Comprobaciones: el editor no reportó errores. En navegador se verificaron los dos destinos, el efecto hover (elevación de 4 px y escala 1.04) y el contorno de foco por teclado.
+
+13. Retirada del enlace de comparación CSS de la navegación
+
+Fecha: 28/10/2026.
+
+Se retiró el enlace “Comparar CSS” de los menús principales de inicio, contacto, reservas y tarifas. También se retiró de comparacion-css.html el enlace de navegación que apuntaba a la propia página. La página comparativa se conserva como recurso independiente del ejercicio del Día 2 y mantiene su enlace de regreso al inicio.
+
+Comprobaciones: el editor no reportó errores en las cinco páginas HTML modificadas.
+
+14. Carruseles automáticos de promociones y bicicletas
+
+Fecha: 28/10/2026.
+
+En index.html, la sección “Planes para descubrir la ciudad” pasó a usar el componente Carousel de Bootstrap y cambia de promoción automáticamente cada 5 segundos. Incluye controles anterior/siguiente, indicadores y un botón para pausar o reanudar.
+
+En paginas/reservas.html se crearon carruseles independientes para bicicletas urbanas, de montaña y eléctricas, también con intervalo de 5 segundos, controles manuales, contador de opciones y botón para pausar o reanudar. Cada diapositiva conserva su propia casilla; las selecciones permanecen marcadas al cambiar de bicicleta y se pueden elegir varias.
+
+Se agregó carousel-controls.js para inicializar los carruseles y gestionar pausa, reanudación, foco de teclado, pestañas ocultas y la preferencia prefers-reduced-motion. El cambio automático se pausa al entrar con teclado a los controles o a una opción; con movimiento reducido, inicia pausado. Bootstrap Bundle se carga en la página de reservas.
+
+Comprobaciones: en navegador se verificó el avance automático de las promociones y las categorías de bicicletas, que las casillas seleccionadas persisten al cambiar de diapositiva, que el control de pausa mantiene la rotación detenida y que prefers-reduced-motion deja pausados los tres carruseles de bicicletas. El editor no reportó errores en HTML, CSS ni JavaScript.
+
+15. Rotación continua y pausa por selección
+
+Fecha: 28/10/2026.
+
+Se retiraron los botones “Pausar” y “Reanudar” de las promociones y de los tres carruseles de bicicletas. Se desactivó la pausa automática por hover y foco. La rotación de promociones se detiene cuando se elige manualmente una diapositiva; en reservas, cada carrusel se detiene cuando se marca una bicicleta de su categoría y vuelve a rotar si se desmarca la última opción seleccionada de esa categoría. Las flechas manuales siguen disponibles. Se conserva la excepción de accesibilidad: con prefers-reduced-motion los carruseles no comienzan a rotar.
+
+Comprobaciones: el editor no reportó errores y no quedan referencias a los controles de pausa. En navegador se verificó que el temporizador está activo al inicio, que elegir una promoción detiene su temporizador y que marcar una bicicleta detiene el temporizador de su categoría.
+
+16. Cabecera centrada y menú desplegable
+
+Fecha: 28/10/2026.
+
+Se unificó la cabecera de las cinco páginas HTML. El logotipo y el nombre “Rueda Libre” quedan centrados en la parte superior. Los enlaces de navegación se agruparon en un menú lateral izquierdo que se abre y se cierra con un botón visual de tres líneas.
+
+El control se implementó con los elementos nativos details y summary de HTML, por lo que funciona con clic, teclado y pantalla táctil sin JavaScript. Se aplicaron estilos comunes en bootstrap-theme.css y se adaptó style.css para que las reglas de listas y navegación de la página comparativa no afecten el menú nuevo.
+
+Comprobaciones: el editor no reportó errores en las cinco páginas, las dos hojas CSS ni los enlaces de navegación. En navegador se verificó la marca centrada en la portada, que el menú se despliega al activar el botón y que la lista del menú no hereda los adornos de listas de la página comparativa.
+
+17. Prototipo nocturno con Tailwind Play CDN
+
+Se creó nocturna/prototipo.html como una propuesta independiente para la sección principal de Rueda Nocturna. La página carga Tailwind CSS desde Play CDN y presenta la etiqueta “Nuevo · Jueves a sábado”, el título “Rueda Nocturna”, el texto “Descubre Medellín en bici cuando se encienden las luces”, los datos “3 rutas” y “Desde $55.000”, y el enlace “Inscríbete”. El enlace lleva al formulario de reservas. La fotografía de una bicicleta se usa como fondo y una capa oscura uniforme ayuda a mantener el contraste del texto.
+
+El enlace “Inscríbete” se construyó como un elemento <a> con utilidades Tailwind para mostrarlo como botón: inline-flex alinea el texto y la flecha, gap-4 separa ambos elementos, rounded-full redondea el contorno, bg-[#1e7a4f] y hover:bg-[#165e3d] definen el verde normal y al pasar el cursor, y px-7 y py-4 controlan el espacio interior. También se añadieron clases de foco visible para teclado.
+
+En el ejercicio de Bootstrap de la semana 2, un enlace con apariencia de botón se construía con las clases de componente btn btn-primary. Bootstrap aplica al componente estilos predefinidos. En este prototipo, Tailwind sigue un enfoque utility-first: las clases pequeñas describen directamente la alineación, el espacio, el color, la forma y el estado del enlace, y se combinan en el HTML. La página no carga Bootstrap ni agrega reglas <style> o atributos style.
+
+18. Sesión 8: landing responsive y decisión de framework
+
+Fecha: 04/11/2026.
+
+Se creó nocturna/index.html como landing completa de Rueda Nocturna. Usa Tailwind Play CDN, los colores de marca Verde Ruta #1E7A4F, Verde oscuro #165E3D, Naranja Pedal #F39A2B, Azul Noche #14213D y Crema #FAF6EF, y las fuentes DM Sans y Barlow Condensed. El hero recorre las 12 fotografías locales de bicicletas; los controles permiten avanzar, retroceder y pausar. La grilla de las tres rutas pasa de una a dos y tres columnas con los prefijos responsive sm y lg. El control de tema permite alternar modo claro y oscuro, guarda la preferencia local y, si no hay una guardada, respeta la preferencia del sistema. Se añadió la página a los menús principales del sitio.
+
+Comparación propia de grillas de tres tarjetas en este repositorio:
+
+Medida | Bootstrap en comparacion-css.html | Tailwind en nocturna/index.html
+Markup HTML del fragmento | 1.075 bytes | 5.021 bytes
+Tokens dentro de atributos class | 34 | 209
+Columnas responsive | 1, 2 y 3 | 1, 2 y 3
+Breakpoints usados | sm y lg | sm y lg
+
+Los bytes y tokens se midieron sobre el HTML fuente del fragmento de tarjetas, incluyendo el texto y formato de cada ejemplo. Por eso describen el markup de estos ejemplos y no son una prueba controlada de velocidad ni de esfuerzo total. Bootstrap agrupa apariencia en clases de componente, como row, col y card; Tailwind expone más decisiones de diseño directamente en las clases del HTML. En el repositorio, cinco páginas existentes cargan bootstrap-theme.css, que ocupa 11.090 bytes y se comparte entre ellas. La nueva landing no añade una hoja CSS propia, pero usa Play CDN, que el propio proveedor reserva para prototipos y no recomienda para producción.
+
+Recomendación para la próxima versión integral del sitio: mantener Bootstrap 5. Ya está aplicado en las cinco páginas principales, comparte la navegación y el tema, y permite evolucionar el sitio sin una migración completa. Tailwind demostró ser útil para personalizar rápidamente una landing y su modo oscuro. Si se elige para reemplazar Bootstrap en todo el sitio, conviene planear una migración completa y evitar mantener dos sistemas en paralelo.
+
+19. Reto 5–8: landing, responsive, tema y decisión de framework
+
+Fecha: 05/11/2026.
+
+Maquetación y responsive:
+- Se completó la navegación interna hacia Inicio, Rutas y Cómo funciona; el botón Inscríbete permanece visible también en celular. La cabecera se apila en móvil, oculta sus enlaces de sección hasta md y pasa a una fila desde md.
+- Las tres rutas usan una cuadrícula de una columna, dos desde sm (640 px) y tres desde lg (1024 px). Los pasos usan grid porque cuatro elementos con igual jerarquía se distribuyen en columnas regulares y cambian de una a dos y cuatro columnas según el ancho.
+- El footer tiene tres bloques flexibles. Las secciones comparten contenedor centrado max-w-7xl y relleno lateral responsive.
+
+Pruebas responsive:
+
+Ancho | Cabecera | Rutas | Pasos | Desbordamiento horizontal
+360 px | Apilada; enlaces ocultos y botón visible | 1 columna | 1 columna | No
+768 px | En fila; navegación visible | 2 columnas | 2 columnas | No
+1024 px | En fila; navegación visible | 3 columnas | 4 columnas | No
+1280 px | En fila; navegación visible | 3 columnas | 4 columnas | No
+
+Tema y contraste:
+- `src/input.css` define los colores de marca (Verde Ruta, Verde Oscuro, Naranja Pedal, Azul Noche, Crema, Gris Asfalto y Amarillo Farol #FFD166), los tonos de superficie de apoyo y las familias Montserrat y Open Sans.
+- La variante `dark:` sigue `prefers-color-scheme` por defecto. El contraste se calculó con la fórmula WCAG relativa sRGB; texto normal requiere 4.5:1.
+
+Texto / fondo | Relación | Resultado
+Verde Claro #8DC5A5 / Azul Noche #14213D | 8.11:1 | Apto
+Verde Claro #8DC5A5 / Card Noche #183526 | 6.77:1 | Apto
+Menta #B8DFC7 / Fondo Noche #081B13 | 12.25:1 | Apto
+Texto Card Noche #D1DCD4 / Card Noche #183526 | 9.45:1 | Apto
+Texto Secundario Noche #C7D9CE / Superficie Noche #10251A | 10.94:1 | Apto
+Verde Ruta #1E7A4F / Crema #FAF6EF | 4.93:1 | Apto
+Gris Asfalto #5B6470 / Crema #FAF6EF | 5.57:1 | Apto
+Blanco #FFFFFF / Verde Ruta #1E7A4F | 5.31:1 | Apto
+Azul Noche #14213D / Amarillo Farol #FFD166 | 11.08:1 | Apto
+Verde Ruta #1E7A4F / Azul Noche #14213D | 3.01:1 | No apto para texto normal; no se usa como texto. Para texto sobre Azul Noche se usa Verde Claro (8.11:1) o blanco.
+
+Legibilidad y recursos:
+- Antes del refactor, el enlace “Reservar esta ruta” repetía la misma lista de utilidades 3 veces en la landing; el botón principal del kit se repetía 3 veces. Se conservaron las tarjetas y se centralizaron los botones con dos clases de componente (`button-primary` y `button-accent`) definidas con `@apply`; la landing usa la principal 5 veces y la de acento una vez. No se crearon variantes de tarjeta.
+- Se ordenaron las clases por función en los elementos nuevos y se sustituyó el CDN de Tailwind por Tailwind CLI con `--minify`.
+- Medición del CSS compilado local: 40.304 bytes. Medición de las URL Bootstrap 5.3.8 cargadas por el sitio: CSS 232.111 bytes y bundle JavaScript 80.496 bytes. Son tamaños de recursos descargados sin compresión HTTP; no se cuentan aquí el CSS de tema local de Bootstrap (11.090 bytes, compartido por las páginas del sitio) ni el JavaScript propio de la landing. El CSS de Tailwind es específico de las clases incluidas en la landing y el kit; los bytes no representan por sí solos velocidad de renderizado.
+
+Comparativa y recomendación:
+
+Criterio | Bootstrap (experiencia en el sitio) | Tailwind (experiencia en Rueda Nocturna)
+Curva de aprendizaje | Arranque más rápido con componentes listos (btn, card y grid); exige aprender la API de componentes y sus convenciones. | Más decisiones iniciales y listas de clases más extensas; el diseño se compone directamente con utilidades y se refactorizan patrones repetidos con `@apply`.
+Personalización | El tema local centraliza la marca, pero la estructura y los estilos parten de convenciones de Bootstrap. | `@theme` genera utilidades para la paleta y fuentes; responsive y modo oscuro quedan explícitos en el HTML.
+Tamaño final medido | Bootstrap 5.3.8: CSS 232.111 B y JS bundle 80.496 B, más 11.090 B de tema local compartido. | CSS de producción específico, minificado: 40.304 B. Tailwind no requiere un runtime JavaScript de framework; la landing mantiene su propio JS de carrusel.
+Casos de uso | Conveniente para el sitio existente, sus cinco páginas Bootstrap, componentes y tema compartidos. | Conveniente para páginas nuevas con identidad visual particular y CSS de producción podado a las utilidades usadas.
+
+Recomendación: conservar Bootstrap para la próxima versión integral del sitio, porque ya gobierna sus cinco páginas, componentes y navegación; así se evita una migración amplia y mantener dos frameworks en paralelo. Tailwind es adecuado para esta landing autónoma: el CSS compilado de 40.304 B fue menor que Bootstrap CSS, y su tema responsive/oscuro quedó expresado con utilidades. Esta decisión se basa en los recursos medidos y la experiencia de este repositorio; no es una comparación de rendimiento en ejecución.
