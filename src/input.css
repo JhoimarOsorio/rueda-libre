@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @source "../nocturna/index.html";
-@source "../paginas/rueda_noctuna.html";
+@source "../paginas/rueda_nocturna.html";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
