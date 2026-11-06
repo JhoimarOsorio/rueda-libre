@@ -266,3 +266,27 @@ Tamaño final medido | Bootstrap 5.3.8: CSS 232.111 B y JS bundle 80.496 B, más
 Casos de uso | Conveniente para el sitio existente, sus cinco páginas Bootstrap, componentes y tema compartidos. | Conveniente para páginas nuevas con identidad visual particular y CSS de producción podado a las utilidades usadas.
 
 Recomendación: conservar Bootstrap para la próxima versión integral del sitio, porque ya gobierna sus cinco páginas, componentes y navegación; así se evita una migración amplia y mantener dos frameworks en paralelo. Tailwind es adecuado para esta landing autónoma: el CSS compilado de 40.304 B fue menor que Bootstrap CSS, y su tema responsive/oscuro quedó expresado con utilidades. Esta decisión se basa en los recursos medidos y la experiencia de este repositorio; no es una comparación de rendimiento en ejecución.
+
+20. Sesión 9: cierre de Rueda Nocturna
+
+Fecha de implementación: 06/11/2026.
+
+MiniReto 9:
+- Se agregó el formulario semántico de inscripción a `nocturna/index.html`, con grupos de campos, etiquetas asociadas y validación nativa para nombre, correo, celular, ruta, día, acompañantes, experiencia, bicicleta propia y aceptación de condiciones.
+- La confirmación informa que esta versión estática solo valida los datos en el navegador; no los envía ni almacena.
+- Tiempo real de contrarreloj: pendiente de medir por la persona autora. Esta implementación no se realizó con el cronómetro del reto.
+
+MiniReto 10:
+- El sitio principal ya incluía el enlace a Rueda Nocturna en sus cuatro páginas; se agregó una cuarta diapositiva al carrusel de promociones para enlazar la campaña.
+- Se unificaron las fuentes Montserrat para encabezados y Open Sans para texto entre el sitio Bootstrap y la landing Tailwind. Los colores y el correo de contacto ya compartían los mismos valores.
+- Tiempo real de contrarreloj: pendiente de medir por la persona autora.
+
+MiniReto 11:
+- Se añadió la cuadrícula responsive de planes Individual, Pareja y Grupo. El plan Pareja queda destacado y las tarjetas conservan igual ancho, altura y relleno en escritorio; sus botones quedan alineados al final.
+- Tiempo real de contrarreloj: pendiente de medir por la persona autora.
+
+MiniReto 12:
+- Se actualizó el README con las páginas, tecnologías, recomendación de framework, capturas y guion de demo.
+- GitHub Pages quedó habilitado desde la rama principal. URLs: https://jhoimarosorio.github.io/rueda-libre/ y https://jhoimarosorio.github.io/rueda-libre/nocturna/. La configuración está activa; falta comprobar que la última versión termine de desplegarse y validar ambas URLs.
+- La validación W3C sigue pendiente. El commit y el push de esta entrega se realizan después de registrar esta bitácora.
+- Demo de tres minutos y retroalimentación de un compañero: pendientes de realizar y registrar. No se inventaron resultados ni comentarios.

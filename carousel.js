@@ -21,6 +21,13 @@
                 title: "Descubre Medellín con un guía local",
                 action: "Consultar recorridos guiados",
                 href: "paginas/tarifas.html#recorridos"
+            },
+            {
+                image: "electrica.jpeg",
+                alt: "Bicicleta preparada para recorrer Medellín de noche",
+                title: "Pedalea Medellín cuando cae la noche",
+                action: "Conoce Rueda Nocturna",
+                href: "nocturna/index.html"
             }
         ],
         urbanas: [
