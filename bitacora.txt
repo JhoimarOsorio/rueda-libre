@@ -287,6 +287,8 @@ MiniReto 11:
 
 MiniReto 12:
 - Se actualizó el README con las páginas, tecnologías, recomendación de framework, capturas y guion de demo.
-- GitHub Pages quedó habilitado desde la rama principal. URLs: https://jhoimarosorio.github.io/rueda-libre/ y https://jhoimarosorio.github.io/rueda-libre/nocturna/. La configuración está activa; falta comprobar que la última versión termine de desplegarse y validar ambas URLs.
-- La validación W3C sigue pendiente. El commit y el push de esta entrega se realizan después de registrar esta bitácora.
+- GitHub Pages quedó habilitado desde la rama principal. URLs: https://jhoimarosorio.github.io/rueda-libre/ y https://jhoimarosorio.github.io/rueda-libre/nocturna/.
+- El sitio, la landing y los recursos principales responden con HTTP 200. La última ejecución de Pages terminó correctamente.
+- W3C Nu reportó cero errores en la landing y en Reservas. La portada reportó un `aria-labelledby` sin rol en su modal; se agregó `role="dialog"`, se publicó el arreglo y se comprobó que la nueva marca está en la página. El servicio W3C aplicó un límite de solicitudes antes de poder repetir la validación final de la portada.
+- Commits publicados: `0586bb8` (entrega Rueda Nocturna) y `0bb3a99` (semántica del diálogo de la portada).
 - Demo de tres minutos y retroalimentación de un compañero: pendientes de realizar y registrar. No se inventaron resultados ni comentarios.

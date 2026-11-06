@@ -6,8 +6,8 @@ Ecosistema web para conocer los servicios de alquiler y recorridos en bicicleta 
 
 - **Sitio Rueda Libre:** [abrir la página de inicio](./index.html).
 - **Landing Rueda Nocturna:** [abrir la landing](./nocturna/index.html).
-- **Sitio publicado:** [jhoimarosorio.github.io/rueda-libre](https://jhoimarosorio.github.io/rueda-libre/).
-- **Landing publicada:** [Rueda Nocturna en GitHub Pages](https://jhoimarosorio.github.io/rueda-libre/nocturna/).
+- **Sitio publicado y verificado:** [jhoimarosorio.github.io/rueda-libre](https://jhoimarosorio.github.io/rueda-libre/).
+- **Landing publicada y verificada:** [Rueda Nocturna en GitHub Pages](https://jhoimarosorio.github.io/rueda-libre/nocturna/).
 
 Las páginas se enlazan entre sí: la navegación principal y el carrusel de promociones llevan a Rueda Nocturna; el logo de la landing regresa al sitio y sus botones llevan a reservas.
 
@@ -63,14 +63,12 @@ npm run build:nocturna
 
 El comando escribe el CSS minificado en `nocturna/tailwind.css`. Bootstrap y Google Fonts se cargan desde servicios externos y requieren conexión a Internet.
 
-## Lista de revisión para publicar
-
-Antes de activar GitHub Pages:
+## Verificación para cada lanzamiento
 
 1. Ejecuta `npm run build:nocturna` y confirma que `nocturna/tailwind.css` actualizado quede incluido en el repositorio.
 2. Prueba los formularios vacío, con datos inválidos y completos, y recórrelos con teclado.
 3. Revisa las vistas de 360, 768 y 1280 px, ambos temas de la landing y los enlaces entre páginas.
-4. Valida `nocturna/index.html` y `paginas/reservas.html` con el validador W3C.
+4. `nocturna/index.html` y `paginas/reservas.html` se validaron con W3C Nu sin errores.
 5. Verifica las dos URLs publicadas después de cada lanzamiento y confirma que no haya errores 404.
 
 ## Aprendizajes
