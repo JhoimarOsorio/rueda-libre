@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build:nocturna": "tailwindcss -i ./src/input.css -o ./nocturna/tailwind.css --minify"
+    "build:nocturna": "tailwindcss -i ../estilos/input.css -o ../estilos/tailwind.css --minify"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.13",

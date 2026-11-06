@@ -22,46 +22,40 @@ Una analogia sencilla: HTML construye las piezas, CSS las decora y organiza, y J
 
 2. ARCHIVOS DEL PROYECTO
 
-La carpeta rueda_libre contiene estos archivos y subcarpetas principales:
+La carpeta rueda_libre organiza el proyecto en estos archivos y subcarpetas principales:
 
 index.html
     Pagina de inicio. Presenta el negocio, sus servicios, promociones, ubicacion y formulario de consulta.
 
-bootstrap-theme.css
-    Personaliza los colores y componentes de Bootstrap que se usan en las paginas principales.
+paginas/
+    Paginas HTML adicionales, como contacto, reservas, tarifas y la comparacion de CSS. El index.html principal y las paginas de nocturna/ conservan su ubicacion.
 
-style.css
-    Contiene estilos CSS propios y se utiliza, entre otros lugares, en la pagina comparativa.
+estilos/
+    Hojas CSS del sitio y la landing: bootstrap-theme.css, carousel.css, style.css, input.css (fuente Tailwind) y tailwind.css (CSS compilado).
 
-carousel-controls.js
-    Controla el inicio, la pausa y el contador de los carruseles de promociones y bicicletas.
+JavaScript/
+    Scripts del sitio, el tema y los carruseles.
 
-comparacion-css.html
-    Pagina de demostracion para comparar una grilla hecha con CSS propio con otra hecha con Bootstrap.
+otros/
+    Manifiestos package.json y package-lock.json, bitacoras y la antigua configuracion JSON de VS Code.
 
-paginas/contactanos.html
-    Formulario de contacto.
-
-paginas/reservas.html
-    Formulario para elegir bicicleta, duracion, fecha, hora y otras opciones.
-
-paginas/tarifas.html
-    Tablas con precios de alquiler y recorridos guiados.
+nocturna/
+    Paginas HTML de la landing y prototipos. Comparten el CSS generado que esta en estilos/.
 
 img/
     Logotipo, ilustraciones y fotografias de bicicletas.
 
-Las rutas de archivos dependen de la ubicacion. Desde index.html se escribe, por ejemplo, img/logo.svg. Desde paginas/reservas.html se usa ../img/urbana.jpeg porque primero hay que subir un nivel desde paginas y luego entrar en img. El texto ../ significa "subir a la carpeta anterior".
+Las rutas de archivos dependen de la ubicacion. Desde index.html se escribe, por ejemplo, img/logo.svg o estilos/bootstrap-theme.css. Desde paginas/reservas.html se usa ../img/urbana.jpeg, ../estilos/bootstrap-theme.css y ../JavaScript/carousel.js porque primero hay que subir un nivel desde paginas. El texto ../ significa "subir a la carpeta anterior".
 
 3. COMO PREPARAR LOS ARCHIVOS
 
 Para empezar manualmente:
 
 1. Crea una carpeta llamada rueda_libre.
-2. Dentro, crea index.html, bootstrap-theme.css, style.css y carousel-controls.js.
-3. Crea las carpetas paginas e img.
-4. Dentro de paginas crea contactanos.html, reservas.html y tarifas.html.
-5. Copia las imagenes que se usaran en img.
+2. Dentro, crea index.html y las carpetas paginas, estilos, JavaScript, otros e img.
+3. Guarda los HTML adicionales en paginas/, los CSS en estilos/ y los JS en JavaScript/.
+4. Guarda los manifiestos JSON y las bitacoras en otros/.
+5. Copia las imagenes que se usaran en img/.
 6. Abre index.html en un navegador para revisar el resultado.
 
 Es importante escribir los nombres de archivos igual que aparecen en la carpeta. En algunos servidores, las mayusculas y minusculas son diferentes. Los nombres con espacios, tildes o parentesis deben coincidir exactamente con el nombre real del archivo.
@@ -97,12 +91,12 @@ Los puntos suspensivos solo representan contenido que se debe agregar; no se esc
 
 5. CARGAR BOOTSTRAP Y LOS ESTILOS DEL SITIO
 
-En el head de las paginas principales se carga primero Bootstrap y luego el tema propio:
+En el head de index.html se carga primero Bootstrap y luego el tema propio:
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="bootstrap-theme.css">
+<link rel="stylesheet" href="estilos/bootstrap-theme.css">
 
-En una pagina dentro de paginas, el segundo enlace debe ser ../bootstrap-theme.css.
+En una pagina dentro de paginas, el segundo enlace debe ser ../estilos/bootstrap-theme.css.
 
 El orden importa: primero se carga Bootstrap y despues el tema local, para que las reglas propias puedan personalizar algunos estilos de Bootstrap.
 
@@ -228,7 +222,7 @@ Esto solo muestra un mensaje en pantalla; no transmite los datos. Para convertir
 
 13. ESTILOS Y COLORES
 
-bootstrap-theme.css cambia el aspecto de Bootstrap: colores principales, botones, enlaces, tablas, tarjetas y componentes de la pagina. style.css contiene reglas para el ejemplo de CSS propio y otros estilos de la comparacion.
+estilos/bootstrap-theme.css cambia el aspecto de Bootstrap: colores principales, botones, enlaces, tablas, tarjetas y componentes de la pagina. estilos/style.css contiene reglas para el ejemplo de CSS propio y otros estilos de la comparacion.
 
 Una regla CSS tiene un selector y propiedades:
 
@@ -251,7 +245,7 @@ Las hojas de estilos tambien definen espacios, bordes redondeados, sombras, imag
 
 14. PAGINA DE COMPARACION
 
-comparacion-css.html muestra una misma idea de tarjetas en dos versiones. La primera utiliza clases propias, como servicios y servicio, que se definen en style.css. La segunda utiliza container, row, col y card de Bootstrap.
+paginas/comparacion-css.html muestra una misma idea de tarjetas en dos versiones. La primera utiliza clases propias, como servicios y servicio, que se definen en estilos/style.css. La segunda utiliza container, row, col y card de Bootstrap.
 
 La pagina sirve para aprender que se puede construir una distribucion con CSS escrito para el proyecto o aprovechar componentes ya preparados por Bootstrap. Se conserva separada del menu principal.
 
@@ -287,7 +281,12 @@ El menu y los enlaces deben poder utilizarse con teclado. El elemento summary pe
 
 17. COMO PUBLICAR
 
-El sitio puede publicarse en un alojamiento para paginas estaticas, por ejemplo GitHub Pages. Se suben los archivos respetando la estructura de carpetas y se configura el alojamiento para servir index.html como pagina inicial.
+Para instalar dependencias y compilar Tailwind desde la raiz del proyecto, usa npm con el prefijo otros:
+
+npm install --prefix otros
+npm --prefix otros run build:nocturna
+
+El CSS compilado se guarda en estilos/tailwind.css. El sitio puede publicarse en un alojamiento para paginas estaticas, por ejemplo GitHub Pages. Se suben los archivos respetando la estructura de carpetas y se configura el alojamiento para servir index.html como pagina inicial.
 
 Despues de publicar, se deben abrir las paginas en la direccion publica y volver a revisar imagenes, enlaces y formularios. Algunos errores de rutas que no aparecen al probar localmente pueden notarse al publicar, especialmente si el nombre del archivo usa mayusculas, espacios o tildes.
 

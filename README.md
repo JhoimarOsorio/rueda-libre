@@ -48,24 +48,33 @@ Las capturas de escritorio, celular y modo oscuro se encuentran en [`capturas/`]
 - [`paginas/reservas.html`](./paginas/reservas.html): formulario de demostración para reservar bicicletas.
 - [`paginas/tarifas.html`](./paginas/tarifas.html): tarifas de alquiler y recorridos.
 - [`paginas/contactanos.html`](./paginas/contactanos.html): formulario de contacto.
+- [`paginas/comparacion-css.html`](./paginas/comparacion-css.html): comparación entre CSS propio y Bootstrap.
 - [`nocturna/index.html`](./nocturna/index.html): landing responsive de Rueda Nocturna con rutas, planes e inscripción.
 - [`paginas/rueda_nocturna.html`](./paginas/rueda_nocturna.html): kit de componentes de la marca.
 - [`nocturna/prototipo.html`](./nocturna/prototipo.html): prototipo inicial de la campaña.
 
+## Organización de carpetas
+
+- [`paginas/`](./paginas/): páginas HTML adicionales; `index.html` principal y los HTML de [`nocturna/`](./nocturna/) se mantienen en sus ubicaciones.
+- [`estilos/`](./estilos/): hojas CSS, incluido el código fuente y el CSS compilado de Tailwind.
+- [`JavaScript/`](./JavaScript/): scripts del sitio y los carruseles.
+- [`otros/`](./otros/): manifiestos npm, bitácoras y la configuración JSON de VS Code archivada fuera de la carpeta activa `.vscode/`.
+- [`img/`](./img/) y [`capturas/`](./capturas/): imágenes y evidencias visuales.
+
 ## Ejecutar y compilar
 
-La página principal puede abrirse directamente en el navegador. Para generar o actualizar el CSS de producción de la landing:
+La página principal puede abrirse directamente en el navegador. Los manifiestos npm están en `otros/`; para instalar las dependencias y generar o actualizar el CSS de producción de la landing:
 
 ```bash
-npm install
-npm run build:nocturna
+npm install --prefix otros
+npm --prefix otros run build:nocturna
 ```
 
-El comando escribe el CSS minificado en `nocturna/tailwind.css`. Bootstrap y Google Fonts se cargan desde servicios externos y requieren conexión a Internet.
+El comando escribe el CSS minificado en `estilos/tailwind.css`. Bootstrap y Google Fonts se cargan desde servicios externos y requieren conexión a Internet.
 
 ## Verificación para cada lanzamiento
 
-1. Ejecuta `npm run build:nocturna` y confirma que `nocturna/tailwind.css` actualizado quede incluido en el repositorio.
+1. Ejecuta `npm --prefix otros run build:nocturna` y confirma que `estilos/tailwind.css` actualizado quede incluido en el repositorio.
 2. Prueba los formularios vacío, con datos inválidos y completos, y recórrelos con teclado.
 3. Revisa las vistas de 360, 768 y 1280 px, ambos temas de la landing y los enlaces entre páginas.
 4. `nocturna/index.html` y `paginas/reservas.html` se validaron con W3C Nu sin errores.
@@ -80,7 +89,7 @@ El comando escribe el CSS minificado en `nocturna/tailwind.css`. Bootstrap y Goo
 
 ## Bitácora y demo
 
-La [bitácora del proyecto](./bitacora.txt) incluye el registro de esta entrega. Los tiempos reales de las contrarrelojes y la retroalimentación de un compañero siguen pendientes de medir y registrar; no se estimaron.
+La [bitácora del proyecto](./otros/bitacora.txt) incluye el registro de esta entrega. Los tiempos reales de las contrarrelojes y la retroalimentación de un compañero siguen pendientes de medir y registrar; no se estimaron.
 
 Guion sugerido para una demo de hasta tres minutos:
 

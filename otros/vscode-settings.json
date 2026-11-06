@@ -1,0 +1,4 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "github.copilot.chat.codesearch.enabled": true
+}
